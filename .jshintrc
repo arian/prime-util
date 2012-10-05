@@ -1,0 +1,8 @@
+{
+  "asi": true,
+  "node": true,
+  "predef": {
+    "describe": true,
+    "it": true
+  }
+}
