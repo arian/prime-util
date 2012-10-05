@@ -1,6 +1,6 @@
 /*
 object methods
-*/"use strict"
+*/"use strict";
 
 var shell = require("prime/util/shell")
 var type = require("prime/util/type")
