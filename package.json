@@ -4,10 +4,13 @@
   "description": "Extra Utilities using Prime",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "make test"
   },
-  "repository": "",
   "author": "Arian Stolwijk",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/arian/prime-util.git"
+  },
   "license": "MIT",
   "dependencies": {
     "prime": "*"
