@@ -5,6 +5,10 @@ Prime-Util
 
 Your utilities for [prime](https://github.com/mootools/prime)
 
+## Install
+
+    npm install prime-util
+
 ## Current Modules Docs
 
 ### prime/mixin
