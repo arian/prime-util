@@ -11,9 +11,34 @@ Your utilities for [prime](https://github.com/mootools/prime)
 
 Mixin other primes into another prime
 
-```
+```js
 var mixin = require('prime-utils/prime/mixin')
 mixin(MyPrime, Options, Events)
+```
+
+### prime/bound
+
+Provides an alternative way to bind class methods. Stores references to bound
+methods internally without any manual setup and does not modify the original
+methods.
+
+```js
+var bound = require("prime-util/prime/bound")
+var mixin = require("prime-util/prime/mixin")
+
+var MyPrime = prime({
+    constructor: function(){
+        this.results = []
+    },
+    method: function(i){
+        this.results.push(i)
+    },
+    run: function(){
+        [1, 2, 3].forEach(function(this.bound('method')))
+        console.log(this.results) // [1, 2, 3]
+    }
+})
+mixin(MyPrime, bound)
 ```
 
 ### types/function
