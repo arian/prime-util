@@ -5,43 +5,41 @@ var mixin = require("../../prime/mixin")
 var expect = require("expect.js")
 
 var A = prime({
-
     fn1: function(){
         return "fn1"
     },
     fn2: function(){
         return "fn2"
     }
-
 })
 
 var B = prime({
-
     fn3: function(){
         return "fn3"
     },
     fn4: function(){
         return "fn4"
     }
-
 })
 
 var C = prime({
-
     fn5: function(){
         return "fn5"
-    },
+    }
+})
+
+var D = prime({
+    inherits: C,
     fn6: function(){
         return "fn6"
     }
-
 })
 
 describe("Prime Mixin", function(){
 
     it("should implement the methods from the other primes into A", function(){
 
-        mixin(A, B, C)
+        mixin(A, B, D)
 
         var a = new A()
         expect(a.fn1()).to.eql("fn1")
