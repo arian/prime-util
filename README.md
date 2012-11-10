@@ -52,19 +52,21 @@ Parentize makes it easier to call overridden parent methods.
 ```js
 var parentize = require('prime-util/prime/parentize')
 var array = require('prime/es5/array')
+var mixin = require('prime-util/prime/mixin')
 var A = prime({
     a: function(){
         return array.join(arguments)
     }
 })
-var B = parentize(prime({
+var B = prime({
     inherits: A,
     a: function(){
         // first argument is the parent method name, in this case 'a'
         // the other parameters are passed as the parent method arguments
         return this.parent('a', 'b', 'c') + ',d'
     }
-}))
+})
+mixin(B, parentize)
 var b = new B
 console.lob(b) // logs "b,c,d"
 ```

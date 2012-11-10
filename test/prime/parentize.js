@@ -2,11 +2,8 @@
 
 var expect = require('expect.js')
 var prime = require('prime')
+var mixin = require('../../prime/mixin')
 var parentize = require('../../prime/parentize')
-
-function fn(){
-    return function(){}
-}
 
 describe('parentize', function(){
 
@@ -18,7 +15,7 @@ describe('parentize', function(){
         var B = prime({inherits: A, a: function(){
             return this.parent('a', 'c') + 'b'
         }})
-        parentize(B)
+        mixin(B, parentize)
         var b = new B()
         var res
         expect(function(){
@@ -35,7 +32,7 @@ describe('parentize', function(){
         var C = prime({inherits: B, c: function(){
             return 'c'
         }})
-        var D = parentize(prime({
+        var D = prime({
             inherits: C,
             a: function(){
                 return this.parent('a') + 'b'
@@ -43,7 +40,8 @@ describe('parentize', function(){
             c: function(){
                 return this.parent('c') + 'd'
             }
-        }), 'a', 'b', 'c')
+        })
+        mixin(D, parentize)
         var d = new D()
         var res1, res2
         expect(function(){
