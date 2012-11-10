@@ -28,9 +28,11 @@ describe('parentize', function(){
         var A = prime({
             a: function(){ return 'a' }
         })
-        var B = prime({inherits: A})
+        var B = prime({inherits: A, c: function(){
+            return 'b'
+        }})
         var C = prime({inherits: B, c: function(){
-            return 'c'
+            return this.parent('c') + 'c'
         }})
         var D = prime({
             inherits: C,
@@ -38,18 +40,13 @@ describe('parentize', function(){
                 return this.parent('a') + 'b'
             },
             c: function(){
-                return this.parent('c') + 'd'
+                return this.parent('c') + 'd' + this.parent('c')
             }
         })
         mixin(D, parentize)
         var d = new D()
-        var res1, res2
-        expect(function(){
-            res1 = d.a()
-            res2 = d.c()
-        }).not.to.throwException()
-        expect(res1).to.be('ab')
-        expect(res2).to.be('cd')
+        expect(d.a()).to.be('ab')
+        expect(d.c()).to.be('bcdbc')
     })
 
 })
