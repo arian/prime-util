@@ -68,7 +68,7 @@ var B = prime({
 })
 mixin(B, parentize)
 var b = new B
-console.lob(b) // logs "b,c,d"
+console.log(b) // logs "b,c,d"
 ```
 
 ### types/function
@@ -78,7 +78,7 @@ console.lob(b) // logs "b,c,d"
 Like Function.prototype.bind.
 
 ```js
-var fn = require('prime-utils/types/function')
+var fn = require('prime-util/types/function')
 fn.bound(function(){
     console.log(this) // "prime"
 }, "prime")
@@ -91,6 +91,6 @@ fn.bound(function(){
 Merges different objects into one object.
 
 ```js
-var object = require('prime-utils/types/object')
+var object = require('prime-util/types/object')
 object.merge({a: 1}, {a: 2, b: 3}, {c: 4}) // {a: 2, b: 3, c: 4}
 ```
