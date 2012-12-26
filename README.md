@@ -16,7 +16,7 @@ Your utilities for [prime](https://github.com/mootools/prime)
 Mixin other primes into another prime
 
 ```js
-var mixin = require('prime-utils/prime/mixin')
+var mixin = require('prime-util/prime/mixin')
 mixin(MyPrime, Options, Events)
 ```
 
