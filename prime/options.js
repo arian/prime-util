@@ -11,7 +11,7 @@ var Options = prime({
         
         this.options = this.options || {};
         
-        var Object = require('prime-util/types/object');
+        var Object = require('../types/object');
         this.options = Object.merge(this.options, options);
     }
     
