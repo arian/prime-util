@@ -9,7 +9,7 @@ var object = shell({
 
     merge: function(key, value){
         if (typeof key == 'string'){
-            if (type(this[key]) == 'object' && type(value[key] == 'object')) object.merge(this[key], value)
+            if (type(this[key]) == 'object') object.merge(this[key], value)
             else this[key] = value
         } else for (var i = 0; i < arguments.length; i++){
             var obj = arguments[i]
