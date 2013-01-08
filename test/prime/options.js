@@ -22,7 +22,25 @@ var A = prime({
     
 });
 
+var B = prime({
+    
+    options: {
+        'a': 'aaa',
+        'b': 'bbb',
+        'c': {
+            'd': 'ddd',
+            'e': 'eee'
+        }
+    },
+    
+    constructor: function(options) {
+        this.setOptions(options, {'f': 'FFF', 'g': 'ggg'}, {'g': 'G', 'h': 'hhh'});
+    }
+    
+});
+
 mixin(A, Options);
+mixin(B, Options);
 
 describe('Options', function() {
     
@@ -37,5 +55,11 @@ describe('Options', function() {
         var a2 = new A({'b': 'BBB', 'c': {'e': 'EEE'}});
         
         expect(a1.options).to.not.be.eql(a2.options);
+    });
+    
+    it ("merge all passed arguments", function() {
+        var b = new B({'b': 'B', 'c': {'e': 'E'}});
+        
+        expect(b.options).to.be.eql({'a': 'aaa', 'b': 'B', 'c': {'d': 'ddd', 'e': 'E'}, 'f': 'FFF', 'g': 'G', 'h': 'hhh'});
     });
 });
