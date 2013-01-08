@@ -32,4 +32,10 @@ describe('Options', function() {
         expect(a.options).to.be.eql({'a': 'aaa', 'b': 'B', 'c': {'d': 'ddd', 'e': 'E'}});
     });
     
+    it ("create new options object per instance", function() {
+        var a1 = new A({'b': 'B', 'c': {'e': 'E'}});
+        var a2 = new A({'b': 'BBB', 'c': {'e': 'EEE'}});
+        
+        expect(a1.options).to.not.be.eql(a2.options);
+    });
 });
