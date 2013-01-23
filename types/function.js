@@ -2,10 +2,10 @@
 function methods
 */"use strict";
 
-var shell = require("prime/util/shell")
+var fn = require("prime/es5/function")
 var slice = Array.prototype.slice
 
-var fn = shell({
+fn.implement({
 
     bound: function(thisArg){
         var args = slice.call(arguments, 1),
