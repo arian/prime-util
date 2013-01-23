@@ -2,10 +2,10 @@
 object methods
 */"use strict";
 
-var shell = require("prime/util/shell")
-var type = require("prime/util/type")
+var object = require("prime/es5/object")
+var type = require("prime/type")
 
-var object = shell({
+object.implement({
 
     merge: function(key, value){
         if (typeof key == 'string'){
