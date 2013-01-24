@@ -76,8 +76,8 @@ console.log(b) // logs "b,c,d"
 Provide "setOptions" method.
 
 ```js
-var prime = require('prime');
-var Options = require('prime-util/options');
+var prime = require('prime')
+var Options = require('prime-util/prime/options')
 
 var A = prime({
 
@@ -88,20 +88,18 @@ var A = prime({
             'd': 'ddd',
             'e': 'eee'
     },
-    
-    constructor: function(options) {
-        this.setOptions(options);
+
+    constructor: function(options){
+        this.setOptions(options)
     }
 
-});
+})
 
-mixin(A, Options);
+mixin(A, Options)
 
-var a = new A({'b': 'B', 'c': {'e': 'E'}});
+var a = new A({'b': 'B', 'c': {'e': 'E'}})
 console.log(a.options); // {'a': 'aaa', 'b': 'B', 'c': {'d': 'ddd', 'e': 'E'}}
-
 ```
-
 
 ### types/function
 

@@ -1,22 +1,17 @@
 "use strict";
 
-var prime = require('prime');
-var object = require('../shell/object');
+var prime = require('prime')
+var object = require('../shell/object')
 
 var Options = prime({
 
-    setOptions: function(options) {
-        var args = [{}, this.options];
-        args.push.apply(args, arguments);
-        this.options = object.merge.apply(null, args);
-
-        if (!options) {
-            return;
-        }
-
-        this.options = object.merge(this.options, options);
+    setOptions: function(options){
+        var args = [{}, this.options]
+        args.push.apply(args, arguments)
+        this.options = object.merge.apply(null, args)
+        return this
     }
 
-});
+})
 
-module.exports = Options;
+module.exports = Options
