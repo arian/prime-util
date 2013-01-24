@@ -1,7 +1,7 @@
 "use strict";
 
 var expect = require("expect.js")
-var object = require("../../types/object")
+var object = require("../../shell/object")
 
 describe("Object", function(){
 

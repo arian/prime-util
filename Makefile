@@ -1,11 +1,11 @@
 
 lint:
 	@./node_modules/.bin/jshint \
-		./test ./prime ./types
+		./test ./prime ./shell
 
 test: lint
 	@./node_modules/.bin/mocha --reporter spec \
-		test/types/* \
+		test/shell/* \
 		test/prime/*
 
 

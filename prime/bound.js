@@ -4,7 +4,7 @@
 // https://github.com/cpojer/mootools-class-extras/blob/master/Source/Class.Binds.js
 
 var prime = require("prime")
-var fn = require("../types/function")
+var fn = require("../shell/function")
 
 var bound = prime({
 

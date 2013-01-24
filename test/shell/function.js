@@ -1,6 +1,6 @@
 "use strict";
 
-var fn = require("../../types/function")
+var fn = require("../../shell/function")
 var expect = require("expect.js")
 
 var rules = function(){
