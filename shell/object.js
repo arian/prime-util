@@ -16,6 +16,17 @@ object.implement({
             for (var k in obj) object.merge(this, k, obj[k])
         }
         return this
+    },
+
+    getValueForPath: function(path) {
+        var pathSteps = path.split('.'),
+            result = this
+
+        for(var i = 0; i < pathSteps.length; i++) {
+            result = (result[pathSteps[i]]) ? result[pathSteps[i]] : result[pathSteps[i]] = {}
+        }
+
+        return result
     }
 
 })
