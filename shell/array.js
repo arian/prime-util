@@ -31,7 +31,7 @@ array.implement({
     },
 
     append: function(items){
-        Array.prototype.push.apply(this, items)
+        this.push.apply(this, items)
         return this
     },
 
