@@ -9,7 +9,7 @@ array.implement({
 
     clean: function(){
         return array.filter(this, function(item){
-            return item !== null && item !== undefined
+            return item != null
         })
     },
 
@@ -75,4 +75,4 @@ array.implement({
 
 })
 
-module.exports = array;
+module.exports = array

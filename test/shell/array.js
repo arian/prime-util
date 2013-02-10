@@ -3,15 +3,15 @@
 var expect = require("expect.js")
 var array  = require("../../shell/array")
 
-describe('Array', function() {
+describe('Array', function(){
 
-    describe('clean', function() {
+    describe('clean', function(){
 
         it('should clean an array from undefined and null values', function(){
-            var items = [null, 1, 0, true, false, "foo", undefined];
-            var arr = array.clean(items);
-            expect(arr).to.eql([1, 0, true, false, "foo"]);
-        });
+            var items = [null, 1, 0, true, false, "foo", undefined]
+            var arr = array.clean(items)
+            expect(arr).to.eql([1, 0, true, false, "foo"])
+        })
 
     })
 
@@ -68,6 +68,10 @@ describe('Array', function() {
             expect(array.last([3])).to.be(3)
         })
 
+        it('should return null if there are no items', function(){
+            expect(array.last([])).to.be(null)
+        })
+
     })
 
     describe('random', function(){
@@ -84,7 +88,7 @@ describe('Array', function() {
             expect(a).to.contain(array.random(a))
             expect(a).to.contain(array.random(a))
             expect(a).to.contain(array.random(a))
-        });
+        })
 
     })
 
@@ -119,7 +123,7 @@ describe('Array', function() {
     describe('pick', function(){
 
         it('should pick a value that is not null from the array', function(){
-            expect(array.pick([null, undefined, true, 1])).to.be.ok()
+            expect(array.pick([null, undefined, true, 1])).to.be(true)
         })
 
         it('should return null', function(){
@@ -133,18 +137,17 @@ describe('Array', function() {
         var arr = [1,2,3,4,5,6,7,8]
 
         it('should find a value from the array', function(){
-            expect(array.find(arr, function(item) {
+            expect(array.find(arr, function(item){
                 return item === 8
             })).to.be(8)
         })
 
         it('should return null', function(){
-            expect(array.find(arr, function(item) {
+            expect(array.find(arr, function(item){
                 return item === 10
             })).to.be(null)
         })
 
     })
-
 
 })
