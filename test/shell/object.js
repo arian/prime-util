@@ -37,6 +37,12 @@ describe("Object", function(){
             expect(a).to.eql({'a': {'b': {'c': 'prime!'}}})
         })
 
+        it('should return "null" if path doesn\'t exist', function() {
+            var a = {'a': {'b': {'c': 'prime!'}}}
+            var value = object.fromPath(a, 'a.b.d')
+            expect(value).to.be(null)
+        })
+
     })
 
 })
