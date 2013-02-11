@@ -18,7 +18,7 @@ object.implement({
         return this
     },
 
-    getValueForPath: function(parts) {
+    fromPath: function(parts) {
         var source = this
         if (typeof parts == 'string') parts = parts.split('.')
         for (var i = 0, l = parts.length; i < l; i++){
