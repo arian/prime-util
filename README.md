@@ -230,3 +230,12 @@ Merges different objects into one object.
 var object = require('prime-util/shell/object')
 object.merge({a: 1}, {a: 2, b: 3}, {c: 4}) // {a: 2, b: 3, c: 4}
 ```
+#### object.getValueForPath
+
+Returns the value at a given path
+
+```js
+var object = require('prime-util/shell/object')
+var demo = {'a': {'b': {'c': 'prime!'}}};
+object.getValueForPath(demo, 'a.b.c') // prime!
+```
