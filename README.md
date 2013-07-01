@@ -87,6 +87,7 @@ var A = prime({
         'c': {
             'd': 'ddd',
             'e': 'eee'
+        }
     },
 
     constructor: function(options){
