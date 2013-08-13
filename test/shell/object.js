@@ -30,6 +30,12 @@ describe("Object", function(){
             expect(value).to.eql('prime!')
         })
 
+        it('should return the value at a given path. Path should be passed as array', function(){
+            var a = {'a': {'b': {'c': 'prime!'}}}
+            var value = object.fromPath(a, ['a', 'b', 'c'])
+            expect(value).to.eql('prime!')
+        })
+
         it('don\'t change anything at the main obj', function(){
             var a = {'a': {'b': {'c': 'prime!'}}}
             var value = object.fromPath(a, 'a.b.c')
