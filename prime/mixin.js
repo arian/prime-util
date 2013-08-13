@@ -2,13 +2,14 @@
 
 var prime = require('prime')
 var slice = require('prime/array/slice')
+var create = require('prime/object/create')
 
 function mixin(object){
 
-    var mixins = slice.call(arguments, 1)
+    var mixins = slice(arguments, 1)
 
     for (var i = 0; i < mixins.length; i++){
-        object.implement(prime.create(mixins[i].prototype))
+        object.implement(create(mixins[i].prototype))
     }
 
     return object
