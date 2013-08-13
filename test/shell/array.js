@@ -47,6 +47,9 @@ describe('Array', function(){
             expect(array.contains([0,1,2], 'not found')).to.not.be.ok()
         })
 
+        it('should return true if the array does contains the specified item', function(){
+            expect(array.contains([0,1,2], 2)).to.be.ok()
+        })
     })
 
     describe('append', function(){
@@ -96,6 +99,7 @@ describe('Array', function(){
 
         it('should include only new items', function(){
             var arr = array.include([1,2,3,4], 1)
+            expect(arr).to.eql([1,2,3,4])
             arr = array.include([1,2,3,4], 5)
             expect(arr).to.eql([1,2,3,4,5])
         })
