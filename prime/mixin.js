@@ -1,7 +1,7 @@
 "use strict";
 
 var prime = require('prime')
-var slice = Array.prototype.slice
+var slice = require('prime/array/slice')
 
 function mixin(object){
 

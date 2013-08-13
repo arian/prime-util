@@ -4,13 +4,13 @@
 // https://github.com/cpojer/mootools-class-extras/blob/master/Source/Class.Binds.js
 
 var prime = require("prime")
-var fn = require("../shell/function")
+var bind = require("prime/function/bind")
 
 var bound = prime({
 
     bound: function(name){
         var bound = this._bound || (this._bound = {})
-        return bound[name] || (bound[name] = fn.bound(this[name], this))
+        return bound[name] || (bound[name] = bind(this[name], this))
     }
 
 })
