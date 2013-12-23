@@ -1,6 +1,6 @@
 {
   "name": "prime-util",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Extra Utilities using Prime",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "prime": "0.2"
+    "prime": "0.3"
   },
   "devDependencies": {
     "mocha": "1.12",
