@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "prime": "0.3",
+    "prime": "~0.4.0",
     "mout": "~0.9.0"
   },
   "devDependencies": {
