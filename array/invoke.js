@@ -1,7 +1,7 @@
 "use strict";
 
-var slice = require('prime/array/slice')
-var map = require('prime/array/map')
+var slice = require('mout/array/slice')
+var map = require('mout/array/map')
 
 function invoke(array, methodName){
     var args = slice(arguments, 1)

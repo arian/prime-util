@@ -1,6 +1,6 @@
 "use strict";
 
-var hasOwn = require('prime/object/hasOwn')
+var hasOwn = require('mout/object/hasOwn')
 
 function fromPath(source, parts){
     if (typeof parts == 'string') parts = parts.split('.')

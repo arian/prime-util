@@ -1,8 +1,8 @@
 "use strict";
 
-var prime = require('prime')
-var slice = require('prime/array/slice')
-var create = require('prime/object/create')
+var prime = require("prime")
+var slice = require("mout/array/slice")
+var create = require("mout/lang/createObject")
 
 function mixin(object){
 

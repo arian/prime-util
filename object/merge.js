@@ -1,10 +1,10 @@
 "use strict";
 
-var type = require('prime/type')
+var type = require('mout/lang/kindOf')
 
 function merge(object, key, value){
     if (typeof key == 'string'){
-        if (type(object[key]) == 'object') merge(object[key], value)
+        if (type(object[key]) == 'Object') merge(object[key], value)
         else object[key] = value
     } else for (var i = 0; i < arguments.length; i++){
         var obj = arguments[i]
