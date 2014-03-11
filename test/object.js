@@ -2,27 +2,9 @@
 
 var expect = require("expect.js")
 
-var merge = require('../object/merge')
 var fromPath = require('../object/fromPath')
 
 describe("Object", function(){
-
-    describe('merge', function(){
-
-        it('should merge any object inside the passed in object, and should return the passed in object', function(){
-            var a = {a:1, b:2, c: {a:1, b:2, c:3}}
-            var b = {c: {d:4}, d:4}
-            var c = {a: 5, c: {a:5}}
-
-            var merger = merge(a, b)
-
-            expect(merger).to.eql({a:1, b:2, c:{a:1, b:2, c:3, d:4}, d:4})
-            expect(merger).to.be(a)
-
-            expect(merge(a, b, c)).to.eql({a:5, b:2, c:{a:5, b:2, c:3, d:4}, d:4})
-        })
-
-    })
 
     describe('fromPath', function(){
 

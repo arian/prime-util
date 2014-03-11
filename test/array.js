@@ -3,30 +3,16 @@
 var expect = require("expect.js")
 var insert = require('mout/array/insert')
 
-var clean = require('../array/clean')
 var invoke = require('../array/invoke')
 var associate = require('../array/associate')
 var contains = require('../array/contains')
-var append = require('../array/append')
 var last = require('../array/last')
-var random = require('../array/random')
 var include = require('../array/include')
-var combine = require('../array/combine')
 var empty = require('../array/empty')
 var pick = require('../array/pick')
 var find = require('../array/find')
 
 describe('Array', function(){
-
-    describe('clean', function(){
-
-        it('should clean an array from undefined and null values', function(){
-            var items = [null, 1, 0, true, false, "foo", undefined]
-            var arr = clean(items)
-            expect(arr).to.eql([1, 0, true, false, "foo"])
-        })
-
-    })
 
     describe('invoke', function(){
 
@@ -65,18 +51,6 @@ describe('Array', function(){
         })
     })
 
-    describe('append', function(){
-
-        it('should append to an array', function(){
-            var a = [1,2,4]
-            var b = [2,3,4,5]
-            append(a, b)
-            expect(a).to.eql([1,2,4,2,3,4,5])
-            expect(b).to.eql([2,3,4,5])
-        })
-
-    })
-
     describe('last', function(){
 
         it('should return the last item in the array', function(){
@@ -90,24 +64,6 @@ describe('Array', function(){
 
     })
 
-    describe('random', function(){
-
-        it('should get a random element from an array', function(){
-            var a = [1]
-
-            expect(random(a)).to.be(1)
-
-            insert(a, 2, 3)
-
-            // Let's try a few times
-            expect(a).to.contain(random(a))
-            expect(a).to.contain(random(a))
-            expect(a).to.contain(random(a))
-            expect(a).to.contain(random(a))
-        })
-
-    })
-
     describe('include', function(){
 
         it('should include only new items', function(){
@@ -115,15 +71,6 @@ describe('Array', function(){
             expect(arr).to.eql([1,2,3,4])
             arr = include([1,2,3,4], 5)
             expect(arr).to.eql([1,2,3,4,5])
-        })
-
-    })
-
-    describe('combine', function(){
-
-        it('should combine an array', function(){
-            var arr = combine([1,2,3,4], [3,1,4,5,6,7])
-            expect(arr).to.eql([1,2,3,4,5,6,7])
         })
 
     })
