@@ -141,18 +141,24 @@ pick(["foo", "bar"]) // "foo"
 pick([null, "bar"]) // "bar"
 ```
 
-### object/merge
+### object/fromPath
 
-Merges different objects into one object.
+Returns the value from an object by its path
 
 ```js
-var merge = require('prime-util/object/merge')
-merge({a: 1}, {a: 2, b: 3}, {c: 4}) // {a: 2, b: 3, c: 4}
+fromPath({
+    food: {
+        fruits: {
+            apples: "red",
+            lemon: "yellow"
+        }
+    }
+}, 'food.fruits.apples') // 'red'
 ```
 
 ## Removed Modules
 The following modules have been removed:
-* prime/mixin
+* prime/mixin - use `mixin` property of prime
 * array/clean - use (mout/array/compact)
 * array/invoke - use (mout/array/invoke)
 * array/contains - use (mout/array/contains)
