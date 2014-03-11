@@ -2,8 +2,8 @@
 
 var expect = require("expect.js")
 
-var merge = require('../../object/merge')
-var fromPath = require('../../object/fromPath')
+var merge = require('../object/merge')
+var fromPath = require('../object/fromPath')
 
 describe("Object", function(){
 
