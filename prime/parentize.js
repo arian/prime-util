@@ -1,7 +1,7 @@
 "use strict";
 
-var prime = require('prime')
-var slice = require('prime/array/slice')
+var prime = require("prime")
+var slice = require("mout/array/slice")
 
 module.exports = prime({
     parent: function(method){

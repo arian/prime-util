@@ -2,10 +2,10 @@
 
 var expect = require('expect.js')
 var prime = require('prime')
-var mixin = require('../../prime/mixin')
 var Options = require('../../prime/options')
 
 var A = prime({
+    mixin: [Options],
 
     options: {
         'a': 'aaa',
@@ -23,6 +23,7 @@ var A = prime({
 })
 
 var B = prime({
+    mixin: [Options],
 
     options: {
         'a': 'aaa',
@@ -38,9 +39,6 @@ var B = prime({
     }
 
 })
-
-mixin(A, Options)
-mixin(B, Options)
 
 describe('Options', function(){
 
