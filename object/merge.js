@@ -1,3 +1,3 @@
 "use strict";
 
-module.exports = require('mout/object/deepMixin')
+module.exports = require('mout/object/deepMixIn')
