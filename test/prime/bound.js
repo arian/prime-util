@@ -3,9 +3,9 @@
 var expect = require("expect.js")
 var prime = require("prime")
 var bound = require("../../prime/bound")
-var mixin = require("../../prime/mixin")
 
 var MyClass = prime({
+    mixin: [bound],
 
     constructor: function(){
         this.props = []
@@ -20,8 +20,6 @@ var MyClass = prime({
     }
 
 })
-
-mixin(MyClass, bound)
 
 describe("bound", function(){
 

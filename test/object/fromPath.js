@@ -2,7 +2,7 @@
 
 var expect = require("expect.js")
 
-var fromPath = require('../object/fromPath')
+var fromPath = require('../../object/fromPath')
 
 describe("Object", function(){
 
