@@ -1,6 +1,6 @@
 {
   "name": "prime-util",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Extra Utilities using Prime",
   "main": "index.js",
   "scripts": {
