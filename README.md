@@ -105,14 +105,6 @@ associate(sounds, animals)
 // returns {'Cow': 'Moo', 'Pig': 'Oink', 'Dog': 'Woof', 'Cat': 'Miao'}
 ```
 
-### array/last
-
-Returns the last value of the array.
-
-```js
-last([1, 2, 3]) // 3
-```
-
 ### array/include
 
 Pushes the passed element into the array if it's not already present (case and
