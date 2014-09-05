@@ -4,7 +4,9 @@
   "description": "Extra Utilities using Prime",
   "main": "index.js",
   "scripts": {
-    "test": "make test"
+    "lint": "jshint .",
+    "mocha": "mocha --reporter spec test/**/*",
+    "test": "npm run lint && npm run mocha"
   },
   "author": "Arian Stolwijk",
   "repository": {
@@ -17,8 +19,8 @@
     "prime": "~0.4.0"
   },
   "devDependencies": {
-    "mocha": "1.12",
     "expect.js": "0.2",
-    "jshint": "2.1"
+    "jshint": "^2.5.5",
+    "mocha": "^1.21.4"
   }
 }

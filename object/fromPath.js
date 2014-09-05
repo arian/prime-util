@@ -9,7 +9,7 @@ function fromPath(source, parts) {
 		parts = parts.join('.')
 	}
 	result = get(source, parts)
-	return result == undefined ? null : result
+	return result === undefined ? null : result
 }
 
 module.exports = fromPath
